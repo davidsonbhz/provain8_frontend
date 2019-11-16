@@ -1,0 +1,22 @@
+<div class="listagem">
+  <div>LISTA DE CADASTRO</div>
+  <table>
+    <thead>
+      <th width="5%"></th>
+      <th width="20%">NOME</th>
+      <th width="20%">E-MAIL</th>
+      <th width="10%">NASCIMENTO</th>
+      <th width="10%">TELEFONE</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pessoa of registros">
+        <td>{{pessoa.id}}</td>
+        <td>{{pessoa.nome}}</td>
+        <td>{{pessoa.email}}</td>
+        <td>{{pessoa.nascimento}}</td>
+        <td>{{pessoa.telefone}}</td>
+      </tr>
+    </tbody>
+
+  </table>
+</div>

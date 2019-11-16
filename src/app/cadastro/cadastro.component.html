@@ -1,0 +1,43 @@
+<div class="cadastro">
+    <div class="row">Cadastro</div>
+    <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+        <div class="form-group">
+            <label for="firstName">Nome</label>
+            <input type="text" class="form-control" name="nome" [(ngModel)]="model.nome" #nome="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && nome.invalid }" required />
+            <div *ngIf="f.submitted && nome.invalid" class="invalid-feedback">
+                <div *ngIf="nome.errors.required">Nome é obrigatório</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Telefone</label>
+            <input type="text" class="form-control" name="telefone" [(ngModel)]="model.telefone" #telefone="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && telefone.invalid }" required />
+            <div *ngIf="f.submitted && telefone.invalid" class="invalid-feedback">
+                <div *ngIf="telefone.errors.required">Last Name is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" name="email" [(ngModel)]="model.email" #email="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email />
+            <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+                <div *ngIf="email.errors.required">Email é obrigatorio</div>
+                <div *ngIf="email.errors.email">Email precisa ser valido!</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Nascimento</label>
+            <input type="text" class="form-control" name="nascimento" [(ngModel)]="model.nascimento"
+                #nascimento="ngModel" [ngClass]="{ 'is-invalid': f.submitted && nascimento.invalid }" required />
+            <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+                <div *ngIf="nascimento.errors.required">Data de nascimento obrigatoria!</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-primary">Register</button>
+        </div>
+    </form>
+</div>

@@ -40,8 +40,6 @@
     border-collapse: collapse;
 }
 
-
-
 .listagem td {
     border: 1px #29abe2 solid;
     font-family: "Helvetica-CondensedRegular";
@@ -49,6 +47,7 @@
     border-spacing: 20px;
     text-align: center;
     color: #808080;
+    cursor: pointer;
 }
 
 .listagem2 td {
@@ -96,6 +95,7 @@
     }
     .listage2 td {
       border-bottom: 1px #29abe2 solid;
+      cursor: pointer;
     }
 
 }

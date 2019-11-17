@@ -14,8 +14,8 @@
           <td>{{pessoa.id}}</td>
           <td>{{pessoa.nome}}</td>
           <td>{{pessoa.email}}</td>
-          <td>{{pessoa.nascimento}}</td>
-          <td>{{pessoa.telefone | mask: '(00) 0 0000-0000'}}</td>
+          <td class="numero">{{pessoa.nascimento}}</td>
+          <td class="numero">{{pessoa.telefone | mask: '(00) 0 0000-0000'}}</td>
         </tr>
       </tbody>
 
@@ -29,10 +29,10 @@
             <ng-template ngbTabContent>
               <div  class="listagem2">
                 <table>
-                    <tr><td>NOME</td><td>{{pessoa.nome}}</td></tr>
-                    <tr><td>E-MAIL</td><td>{{pessoa.email}}</td></tr>
-                    <tr><td>NASC.</td><td>{{pessoa.nascimento}}</td></tr>
-                    <tr><td>TEL.</td><td>{{pessoa.telefone | mask: '(00) 0 0000-0000'}}</td></tr>
+                    <tr (click)="editar_registro(pessoa)"><td>NOME</td><td>{{pessoa.nome}}</td></tr>
+                    <tr (click)="editar_registro(pessoa)"><td>E-MAIL</td><td>{{pessoa.email}}</td></tr>
+                    <tr (click)="editar_registro(pessoa)"><td>NASC.</td><td class="numero">{{pessoa.nascimento}}</td></tr>
+                    <tr (click)="editar_registro(pessoa)"><td>TEL.</td><td class="numero">{{pessoa.telefone | mask: '(00) 0 0000-0000'}}</td></tr>
                 </table>
               </div>
             </ng-template>

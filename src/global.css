@@ -7,6 +7,11 @@
 }
 
 .modal-backdrop {
-    /* bug fix - no overlay */    
-    display: none;    
+    /* bug fix - no overlay */
+    display: none;
+}
+
+.numero {
+  font-family: 'Roboto, monospace' !important;
+  color: red !important;
 }

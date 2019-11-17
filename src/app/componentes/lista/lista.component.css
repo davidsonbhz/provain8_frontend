@@ -1,5 +1,5 @@
 .bloco {
-   
+
     width: 100%;
     height: 100%;
 }
@@ -11,10 +11,7 @@
     margin-right: auto;
     margin-bottom: auto;
     width: 80%;
-    
 }
-
-
 
 .listagem th {
     border: 1px #29abe2 solid;
@@ -43,8 +40,19 @@
     border-collapse: collapse;
 }
 
-.listagem td {    
+
+
+.listagem td {
     border: 1px #29abe2 solid;
+    font-family: "Helvetica-CondensedRegular";
+    border-collapse: separate;
+    border-spacing: 20px;
+    text-align: center;
+    color: #808080;
+}
+
+.listagem2 td {
+    border-bottom: 1px #29abe2 solid;
     font-family: "Helvetica-CondensedRegular";
     border-collapse: separate;
     border-spacing: 20px;
@@ -62,4 +70,32 @@
 
 .listagem tr:last-child td {
     border-bottom: 0px;
+}
+
+.tab {
+  display: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .tab {
+      display: flex;
+      width: 100%;
+    }
+    ngb-tabset {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: auto;
+      width: 80%;
+    }
+    .listagem table {
+      display: none;
+    }
+    .listagem2 table {
+      width: 100%;
+    }
+    .listage2 td {
+      border-bottom: 1px #29abe2 solid;
+    }
+
 }

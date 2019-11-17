@@ -2,7 +2,7 @@
   <div class="listagem">
     <div class="titulo">LISTA DE CADASTRO</div>
     <table>
-      <thead>
+      <thead class="cell-head">
         <th width="5%"></th>
         <th width="20%">NOME</th>
         <th width="20%">E-MAIL</th>
@@ -20,7 +20,24 @@
       </tbody>
 
     </table>
+
   </div>
+
+    <div class="tab">
+      <ngb-tabset>
+          <ngb-tab *ngFor="let pessoa of registros" title="{{pessoa.id}}">
+            <ng-template ngbTabContent>
+              <div  class="listagem2">
+                <table>
+                    <tr><td>NOME</td><td>{{pessoa.nome}}</td></tr>
+                    <tr><td>E-MAIL</td><td>{{pessoa.email}}</td></tr>
+                    <tr><td>NASC.</td><td>{{pessoa.nascimento}}</td></tr>
+                    <tr><td>TEL.</td><td>{{pessoa.telefone | mask: '(00) 0 0000-0000'}}</td></tr>
+                </table>
+              </div>
+            </ng-template>
+          </ngb-tab>
+      </ngb-tabset>
+
+    </div>
 </div>
-
-

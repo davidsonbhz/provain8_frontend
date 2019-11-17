@@ -16,6 +16,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule } from '@angular/material';
 import { NgxMaskModule, IConfig } from 'ngx-mask';
+import {TabViewModule} from 'primeng/tabview';
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
 
@@ -40,7 +41,8 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
       MatButtonModule,
       MatSelectModule,
       MatIconModule,
-      NgxMaskModule.forRoot(options)
+      NgxMaskModule.forRoot(options),
+      TabViewModule
 
    ],
    providers: [

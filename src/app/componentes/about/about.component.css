@@ -1,0 +1,8 @@
+.conteudo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    font-family: 'Roboto, monospace';
+    background-color: transparent;
+}

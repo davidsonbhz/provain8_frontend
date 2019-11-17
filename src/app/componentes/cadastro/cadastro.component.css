@@ -1,0 +1,56 @@
+.bloco {
+    background-color: #20abe2;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.cadastro {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    color: white;
+    font-family: 'Roboto, monospace';
+    
+}
+
+.campo {
+    width: 100%;    
+}
+
+.campo div {
+    color: white !important;
+}
+
+.titulo {
+    color: white;
+}
+
+
+.btcadastrar {
+    background-color: #012d51;
+    color: white;
+    width: 100%;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.btdelete {
+    background-color: red;
+    color: black;
+    width: 100%;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+
+@media only screen and (max-width: 768px) {
+    [class*='cadastro'] {
+        width: 98%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    [class*='cadastro'] {
+        width: 60%;
+    }
+}

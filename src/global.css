@@ -1,0 +1,12 @@
+.titulo  {
+    text-align: center;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 25px;
+    padding-bottom: 10%;
+    color: #29abe2;
+}
+
+.modal-backdrop {
+    /* bug fix - no overlay */    
+    display: none;    
+}

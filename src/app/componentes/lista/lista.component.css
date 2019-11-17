@@ -1,19 +1,20 @@
+.bloco {
+   
+    width: 100%;
+    height: 100%;
+}
+
 .listagem {
     left: 50%;
-    top: 50%;
-    position: absolute;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    -moz-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    width: 80%;
     
 }
 
-.listagem div {
-    text-align: center;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-size: 25px;
-    padding-bottom: 10%;
-}
+
 
 .listagem th {
     border: 1px #29abe2 solid;

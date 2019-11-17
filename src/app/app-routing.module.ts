@@ -1,7 +1,7 @@
-import { AboutComponent } from './about/about.component';
-import { ListaComponent } from './lista/lista.component';
-import { CadastroComponent } from './cadastro/cadastro.component';
-import { InicioComponent } from './inicio/inicio.component';
+import { AboutComponent } from './componentes/about/about.component';
+import { ListaComponent } from './componentes/lista/lista.component';
+import { CadastroComponent } from './componentes/cadastro/cadastro.component';
+import { InicioComponent } from './componentes/inicio/inicio.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 

@@ -1,0 +1,59 @@
+<div class="bloco">
+    <div class="cadastro">
+        <div class="titulo">CADASTRO</div>
+
+
+        <form name="f" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+
+            <div>
+                <mat-form-field class="campo">
+                    <input matInput placeholder="Nome completo" name="nome" [(ngModel)]="model.nome" #nome="ngModel"
+                        [ngClass]="{ 'is-invalid': f.submitted && nome.invalid }" required>
+                    <div *ngIf="f.submitted && nome.invalid" class="invalid-feedback">
+                        <div *ngIf="nome.errors.required">Nome é obrigatório</div>
+                    </div>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field  class="campo">
+                    <input mask="(00) 0 0000-0000" matInput placeholder="Telefone" name="telefone"
+                        [(ngModel)]="model.telefone" #telefone="ngModel"
+                        [ngClass]="{ 'is-invalid': f.submitted && telefone.invalid }" required />
+                    <div *ngIf="f.submitted && telefone.invalid" class="invalid-feedback">
+                        <div *ngIf="telefone.errors.required">Telefone é obrigatório</div>
+                    </div>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field  class="campo">
+                    <input type="text" matInput placeholder="Email" name="email" [(ngModel)]="model.email"
+                        #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email />
+                    <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+                        <div *ngIf="email.errors.required">Email é obrigatorio</div>
+                        <div *ngIf="email.errors.email">Email precisa ser valido!</div>
+                    </div>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <mat-form-field  class="campo">
+                    <input type="date" matInput placeholder="Nascimento" name="nascimento" [(ngModel)]="model.nascimento"
+                        #nascimento="ngModel" [ngClass]="{ 'is-invalid': f.submitted && nascimento.invalid }"
+                        required />
+                    <div *ngIf="f.submitted && nascimento.invalid" class="invalid-feedback">
+                        <div *ngIf="nascimento.errors.required">Data de nascimento obrigatoria!</div>
+                    </div>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <button class="btn btn-primary btcadastrar">{{model.id==null?'CADASTRAR':'ALTERAR'}}</button>
+            </div>
+            
+
+        </form>
+        <div>
+                <button *ngIf="model.id!==null" class="btn btn-danger btdelete" (click)="excluir()">EXCLUIR</button>
+        </div>
+    </div>
+</div>

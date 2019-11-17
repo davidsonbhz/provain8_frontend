@@ -11,6 +11,8 @@ export class CadastroService {
 
   @Output() change: EventEmitter<boolean> = new EventEmitter();
 
+  private pessoa: Pessoa;
+
   constructor(private http: HttpClient) { }
 
   public obterPessoas() {
@@ -18,17 +20,40 @@ export class CadastroService {
   }
 
   public salvar(p: Pessoa) {
+    console.log(p);
     if (p.id !== null) {
       console.log('put', p);
+      /*
       this.http.put(API_CONFIG.endpoint + '/pessoas', p).subscribe(r=> {
         this.change.emit(true);
-      });
+      });*/
+
+      return this.http.put(API_CONFIG.endpoint + '/pessoas/' + p.id, p);
+
     } else {
-      console.log('post', p);
+      /*
       this.http.post(API_CONFIG.endpoint + '/pessoas', p).subscribe(r => {
         this.change.emit(true);
-      });
+      });*/
+
+      return this.http.post(API_CONFIG.endpoint + '/pessoas', p);
+
     }
   }
 
+  public excluir(p: Pessoa) {
+     return this.http.delete(API_CONFIG.endpoint + '/pessoas/' + p.id);
+  }
+
+  public editar(p: Pessoa) {
+    this.pessoa = p;    
+  }
+
+  public getPessoa() {
+    return this.pessoa;
+  }
+
+  public clear() {
+    this.pessoa = null;
+  }
 }

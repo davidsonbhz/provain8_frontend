@@ -1,0 +1,14 @@
+<div class="topcontent">
+  <div class="hamburger" (click)="showHideNav()"><img src="assets/imagens/hamburguer.svg"></div>
+  <div class="hamburguer-aberto" (click)="showHideNav()"><img width="25px" height="25px"
+      src="assets/imagens/hamburguer-aberto.svg"></div>
+
+  <nav id="menu" #nav>
+    <div class="logo">Logo</div>
+    <ul class="nav-links" #navlinks>
+      <li><a (click)="abrir('cadastro')">Cadastro</a></li>
+      <li><a (click)="abrir('lista')">Lista</a></li>
+      <li><a (click)="abrir('about')">Sobre</a></li>
+    </ul>
+  </nav>
+</div>

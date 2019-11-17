@@ -1,0 +1,24 @@
+.rodape {
+    width: 100%;
+    background-size: 100% auto;
+    background-repeat: repeat;
+    background-image: url("/assets/imagens/rodape-desktop.jpg");
+    font-family: 'Roboto, monospace';
+}
+
+.rodape p {
+    text-align: center;
+    color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    [class*='rodape'] {
+        background-image: url("/assets/imagens/rodape-mobile.jpg");
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    [class*='rodape'] {
+        background-image: url("/assets/imagens/rodape-mobile.jpg");
+    }
+}

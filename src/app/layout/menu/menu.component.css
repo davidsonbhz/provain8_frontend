@@ -59,6 +59,7 @@ nav {
   color: white;
   text-decoration: none;
   letter-spacing: 3px;
+  cursor: pointer;
 }
 
 .nav-links li {

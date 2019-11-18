@@ -20,22 +20,11 @@ export class CadastroService {
   }
 
   public salvar(p: Pessoa) {
-    console.log(p);
-    if (p.id !== null) {
-      console.log('put', p);
-      /*
-      this.http.put(API_CONFIG.endpoint + '/pessoas', p).subscribe(r=> {
-        this.change.emit(true);
-      });*/
-
+    //console.log(p);
+    if (p.id !== null) {    
       return this.http.put(API_CONFIG.endpoint + '/pessoas/' + p.id, p);
 
     } else {
-      /*
-      this.http.post(API_CONFIG.endpoint + '/pessoas', p).subscribe(r => {
-        this.change.emit(true);
-      });*/
-
       return this.http.post(API_CONFIG.endpoint + '/pessoas', p);
 
     }
@@ -46,7 +35,7 @@ export class CadastroService {
   }
 
   public editar(p: Pessoa) {
-    this.pessoa = p;    
+    this.pessoa = p;
   }
 
   public getPessoa() {

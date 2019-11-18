@@ -1,0 +1,12 @@
+
+@import '~@angular/material/theming';
+@include mat-core();
+
+
+$tema-davidson-primary: mat-palette($mat-indigo);
+$tema-davidson-accent: mat-palette($mat-pink, A200, A100, A400);
+$tema-davidson-warn: mat-palette($mat-red);
+
+$tema-davidson: mat-light-theme($tema-davidson-primary, $tema-davidson-accent, $tema-davidson-warn);
+
+@include angular-material-theme($tema-davidson);

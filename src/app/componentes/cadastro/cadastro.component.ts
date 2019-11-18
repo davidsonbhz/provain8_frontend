@@ -23,9 +23,9 @@ export class CadastroComponent implements OnInit {
     if(this.service.getPessoa() != null) {
         this.model = this.service.getPessoa();
         //Y-m-d
-        let a = this.model.nascimento.split('/');
-        this.model.nascimento = a[2] + '-' + a[1] + '-' + a[0];
-        console.log(this.model);
+        //let a = this.model.nascimento.split('/');
+        //this.model.nascimento = a[2] + '-' + a[1] + '-' + a[0];
+        //console.log(this.model);
     } else {
         this.model = new Pessoa();
         this.model.id = null;
@@ -37,7 +37,7 @@ export class CadastroComponent implements OnInit {
       this.service.clear();
       this.router.navigate(['lista']);
     });
-    
+
   }
 
   excluir() {
@@ -48,6 +48,6 @@ export class CadastroComponent implements OnInit {
        });
     }
   }
- 
+
 
 }

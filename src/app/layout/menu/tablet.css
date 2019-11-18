@@ -2,7 +2,7 @@
 /*
 Resolução de tablet
 */
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
 
   .nav-links {
     position: absolute;
@@ -13,7 +13,6 @@ Resolução de tablet
     padding-top: 40px;
     padding-left: 25px;
     background-color: #29abe2;
-    background-image: url("/assets/imagens/azul.png");
     box-shadow: inset 0 0 0.3em white, 0 0 1em black;
     opacity: 100;
     display: none;
@@ -23,7 +22,7 @@ Resolução de tablet
     transition: 0.5s ease-in;
   }
 
-  
+
   .logo {
     position: absolute;
     right: 0px;

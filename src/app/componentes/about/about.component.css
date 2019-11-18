@@ -1,8 +1,11 @@
-.conteudo {
+.conteudo-about {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
+    height: 100%;
     font-family: 'Roboto, monospace';
     background-color: transparent;
+    overflow-y: scroll;
+    color: black;
 }

@@ -23,7 +23,7 @@ export class ListaComponent implements OnInit {
   obterPessoas() {
     this.service.obterPessoas().subscribe(r => {
       this.registros = r;
-      console.log(r);
+      //console.log(r);
     });
   }
 

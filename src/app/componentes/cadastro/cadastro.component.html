@@ -2,11 +2,9 @@
     <div class="cadastro">
         <div class="titulo">CADASTRO</div>
 
-
         <form name="f" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
 
             <div>
-              
                 <mat-form-field class="campo">
                     <input matInput placeholder="Nome completo" name="nome" [(ngModel)]="model.nome" #nome="ngModel"
                         [ngClass]="{ 'is-invalid': f.submitted && nome.invalid }" required>
@@ -38,7 +36,7 @@
 
             <div>
                 <mat-form-field  class="campo">
-                    <input type="date" matInput placeholder="Nascimento" name="nascimento" [(ngModel)]="model.nascimento"
+                    <input type="text" mask="00/00/0000" [dropSpecialCharacters]="false" matInput placeholder="Nascimento" name="nascimento" [(ngModel)]="model.nascimento" value=""
                         #nascimento="ngModel" [ngClass]="{ 'is-invalid': f.submitted && nascimento.invalid }"
                         required />
                     <div *ngIf="f.submitted && nascimento.invalid" class="invalid-feedback">

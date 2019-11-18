@@ -28,6 +28,6 @@ export class MenuComponent implements OnInit {
     this.shownav = !this.shownav;
     this.navlinks.nativeElement.classList.toggle('nav-active');
 
-    console.log("show hide");
+    //console.log("show hide");
   }
 }

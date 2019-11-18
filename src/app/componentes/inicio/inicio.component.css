@@ -3,13 +3,14 @@
     padding: 0px;
     box-sizing: border-box;
   }
-  
+
 .bloco {
     background-image: url("/assets/imagens/index-image.jpg");
     width: 100%;
     height: 100%;
     background-position: center top;
     background-size: 100% auto;
+    background-repeat: no-repeat;
 }
 
 .titulo p {

@@ -1,4 +1,4 @@
-# Frontend2
+# Frontend 
 
 Frontend feito utilizando Angular8. 
 
